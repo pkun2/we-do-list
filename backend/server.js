@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import rootRouter from './router/rootRouter.js';
+import pool from './db.js';
 
 const app = express();
 const PORT = 8080;

@@ -1,2 +1,4 @@
 # ds_store 커밋 안되게 설정
 *.DS_Store
+*.env
+*node_modules

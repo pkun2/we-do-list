@@ -10,4 +10,4 @@ COPY . .
 #포트 설정
 EXPOSE 8080
 #서버 실행
-CMD ["node", "server.js"]
+CMD ["npm", "start"]

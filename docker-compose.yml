@@ -1,7 +1,18 @@
 version: '3'
 services:
+  mysql:
+    image: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: 'ToDoList'
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
   backend:
     build: ./backend
+    env_file:
+      - .env
     ports:
       - "8080:8080"
     volumes:
@@ -16,3 +27,4 @@ services:
       - /app/node_modules
     depends_on:
       - backend
+
